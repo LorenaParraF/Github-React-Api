@@ -6,11 +6,12 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 //Views
 import Home from "./Components/Pages/Home/Home";
 import Followers from "./Components/Pages/Followers/Followers";
+import Following from "./Components/Pages/Following/Following";
+import Repositorio from "./Components/Pages/Repositorio/Repositorio";
 
 //Layous
 import MainLayout from "./Layouts/MainLayout";
 import Notfound from "./Components/Custom/Notfound/Notfound";
-import Following from "./Components/Pages/Following/Following";
 
 function App() {
   //JSX
@@ -26,8 +27,11 @@ function App() {
           <Route path="/followers/:user" exact>
             <Followers />
           </Route>
-          <Route path="/followings/:user" exact>
+          <Route path="/following/:user" exact>
             <Following />
+          </Route>
+          <Route path="/repositorio/:user" exact>
+            <Repositorio />
           </Route>
         </MainLayout>
       </Switch>

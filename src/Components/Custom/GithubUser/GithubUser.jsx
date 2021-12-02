@@ -23,8 +23,10 @@ const GithubUser = (props) => {
 
       <div className="card-body flex justify-between items-center">
         <p>
-          <span className="text-yellow text-xl	font-bold	"> Repos: </span>{" "}
-          {public_repos}
+          <Link to={`/repositorio/${github_name}`}>
+            <span className="text-yellow text-xl	font-bold	"> Repos: </span>{" "}
+            {public_repos}
+          </Link>
         </p>
         <p>
           <Link to={`/followers/${github_name}`}>
@@ -33,7 +35,7 @@ const GithubUser = (props) => {
           </Link>
         </p>
         <p>
-          <Link to={`/followings/${github_name}`}>
+          <Link to={`/following/${github_name}`}>
             <span className="text-yellow text-xl	font-bold	"> Following: </span>{" "}
             {following}
           </Link>

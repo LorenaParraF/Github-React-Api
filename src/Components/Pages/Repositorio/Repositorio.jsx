@@ -1,35 +1,36 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import GithubUser from "../../Custom/GithubUser/GithubUser";
 import Loader from "../../Custom/Loader/Loader";
-import { useParams } from "react-router-dom";
 
-const Following = () => {
+const Repositorio = () => {
   const { user } = useParams();
   //State
-  const [followings, setFollowings] = useState([]);
+  const [repos, setRepos] = useState([]);
   const [loader, setLoader] = useState(false);
 
   useEffect(() => {
-    setFollowings([]);
+    setRepos([]);
     setLoader(true);
-    const handleUserFollowings = async () => {
+    const handleUserRepos = async () => {
       const response = await fetch(
-        `https://api.github.com/users/${user}/following`
+        `https://api.github.com/users/${user}/public_repos`
       );
       const result = await response.json();
-      setFollowings(result);
+      setRepos(result);
       console.log(result);
     };
-    handleUserFollowings();
+
+    handleUserRepos();
     setLoader(false);
   }, [user]);
 
   return (
     <div className="bg-gray-800">
-      <h2>Followings</h2>
+      <h2>Repositorios</h2>
 
-      {followings && followings.length > 0 && !loader ? (
-        followings.map((user) => (
+      {repos && repos.length > 0 && !loader ? (
+        repos.map((user) => (
           <GithubUser
             avatar={user.avatar_url ? user.avatar_url : null}
             github={user.html_url}
@@ -43,4 +44,4 @@ const Following = () => {
   );
 };
 
-export default Following;
+export default Repositorio;
