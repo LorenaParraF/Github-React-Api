@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 //Styles
 import "./GithubUser.styles.css";
 
-const GithubUser = props => {
+const GithubUser = (props) => {
   const {
     avatar,
     github,
@@ -33,8 +33,10 @@ const GithubUser = props => {
           </Link>
         </p>
         <p>
-          <span className="text-yellow text-xl	font-bold	"> Following: </span>{" "}
-          {following}
+          <Link to={`/followings/${github_name}`}>
+            <span className="text-yellow text-xl	font-bold	"> Following: </span>{" "}
+            {following}
+          </Link>
         </p>
       </div>
     </div>
