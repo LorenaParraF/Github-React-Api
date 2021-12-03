@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import GithubUser from "../../Custom/GithubUser/GithubUser";
-import Loader from "../../Custom/Loader/Loader";
+import GithubUser from "../../../Custom/GithubUser/GithubUser";
+import Loader from "../../../Custom/Loader/Loader";
 
-const Repositorio = () => {
+const ListadoRepos = () => {
   const { user } = useParams();
   //State
   const [reposit, setReposit] = useState([]);
@@ -14,7 +14,7 @@ const Repositorio = () => {
     setLoader(true);
     const handleUserRepos = async () => {
       const response = await fetch(
-        `https://api.github.com/users/${user}/repos`
+        `https://api.github.com/users/${user}/public_repos`
       );
       const result = await response.json();
       setReposit(result);
@@ -24,7 +24,6 @@ const Repositorio = () => {
     handleUserRepos();
     setLoader(false);
   }, [user]);
-
   return (
     <div className="bg-gray-800">
       <h2>Repositorios</h2>
@@ -45,4 +44,4 @@ const Repositorio = () => {
   );
 };
 
-export default Repositorio;
+export default ListadoRepos;

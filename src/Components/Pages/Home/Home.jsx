@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 //Components
-import UserForm from "../../Home/Form/UserForm"
-import GithubUser from "../../Custom/GithubUser/GithubUser"
-import Loader from "../../Custom/Loader/Loader"
+import UserForm from "../../Home/Form/UserForm";
+import GithubUser from "../../Custom/GithubUser/GithubUser";
+import Loader from "../../Custom/Loader/Loader";
 
 const Home = () => {
   //State
@@ -16,7 +16,7 @@ const Home = () => {
     setUserName(value);
   };
 
-  const handleSearchUser = async e => {
+  const handleSearchUser = async (e) => {
     e.preventDefault();
     setUserInformation(null);
     setLoader(true);
@@ -41,6 +41,7 @@ const Home = () => {
             github={userInformation?.html_url}
             github_name={userInformation?.login}
             name={userInformation?.name}
+            repos={userInformation?.repos}
             public_repos={userInformation?.public_repos}
             followers={userInformation?.followers}
             following={userInformation?.following}

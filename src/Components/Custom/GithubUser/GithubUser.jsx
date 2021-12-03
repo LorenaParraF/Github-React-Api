@@ -9,9 +9,10 @@ const GithubUser = (props) => {
     github,
     github_name,
     name,
-    public_repos,
+    repos,
     followers,
     following,
+    public_repos,
   } = props;
 
   return (
@@ -22,12 +23,15 @@ const GithubUser = (props) => {
       </div>
 
       <div className="card-body flex justify-between items-center">
-        <p>
+        <h1>
           <Link to={`/repositorio/${github_name}`}>
-            <span className="text-yellow text-xl	font-bold	"> Repos: </span>{" "}
-            {public_repos}
+            <span className="text-yellow text-xl	font-bold	">
+              {" "}
+              Repos: {public_repos}{" "}
+            </span>{" "}
+            {repos}
           </Link>
-        </p>
+        </h1>
         <p>
           <Link to={`/followers/${github_name}`}>
             <span className="text-yellow text-xl	font-bold	"> Followers: </span>{" "}

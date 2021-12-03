@@ -31,6 +31,7 @@ const Following = () => {
       {followings && followings.length > 0 && !loader ? (
         followings.map((user) => (
           <GithubUser
+            key={user.id}
             avatar={user.avatar_url ? user.avatar_url : null}
             github={user.html_url}
             github_name={user.login}
