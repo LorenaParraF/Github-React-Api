@@ -28,7 +28,7 @@ const GithubUser = (props) => {
         <img src={avatar} alt={github} className="w-5/12  mt-2" />
 
         <figcaption className="font-medium  md:text-left mr-60">
-          <div className="text-Gray-50 p-2 w-44">{github_name}</div>
+          <div className="text-Gray-50 p-2 h-12 w-5/6">{github_name}</div>
           <div className="text-Gray-50">
             <FontAwesomeIcon icon={faTwitter} />
           </div>
