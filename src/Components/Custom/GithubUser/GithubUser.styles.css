@@ -1,3 +1,7 @@
+body{   
+  background-color: black;
+}
 .card-header img {
   border-radius: 50%;
+  size: 100%;
 }

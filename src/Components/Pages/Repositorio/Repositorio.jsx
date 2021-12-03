@@ -36,6 +36,7 @@ const Repositorio = () => {
             avatar={user.avatar_url ? user.avatar_url : null}
             github={user.html_url}
             github_name={user.login}
+            reposit={reposit}
           />
         ))
       ) : (
