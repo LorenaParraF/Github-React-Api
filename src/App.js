@@ -11,7 +11,6 @@ import Repositorio from "./Components/Pages/Repositorio/Repositorio";
 
 //Layous
 import MainLayout from "./Layouts/MainLayout";
-import Notfound from "./Components/Custom/Notfound/Notfound";
 
 function App() {
   //JSX

@@ -8,7 +8,6 @@ const GithubUser = (props) => {
     avatar,
     github,
     github_name,
-    name,
     repos,
     followers,
     following,
