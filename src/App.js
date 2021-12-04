@@ -7,7 +7,6 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./Components/Pages/Home/Home";
 import Followers from "./Components/Pages/Followers/Followers";
 import Following from "./Components/Pages/Following/Following";
-import Repositorio from "./Components/Pages/Repositorio/Repositorio";
 
 //Layous
 import MainLayout from "./Layouts/MainLayout";
@@ -28,9 +27,6 @@ function App() {
           </Route>
           <Route path="/following/:user" exact>
             <Following />
-          </Route>
-          <Route path="/repositorio/:user" exact>
-            <Repositorio />
           </Route>
         </MainLayout>
       </Switch>

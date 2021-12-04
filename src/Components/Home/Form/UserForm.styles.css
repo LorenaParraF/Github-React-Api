@@ -13,9 +13,10 @@
   transition: all 0.3s ease;
   border-radius: solid rgb(248, 247, 248);
   background-color: #000;
+  color:#fff
   
 }
 input{ 
   background-color: #62cc77;
-  color: rgb(255, 255, 255);
+  color:#fff
 }

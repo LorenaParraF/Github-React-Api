@@ -1,12 +1,15 @@
-import React from 'react'
-
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeartBroken } from "@fortawesome/free-solid-svg-icons";
 
 const Notfound = () => {
-    return (
-        <div>
-          <h2>Notfound: "Pagina no encontrada"</h2>
-        </div>
-    )
-}
+  return (
+    <div>
+      <FontAwesomeIcon icon={faHeartBroken}>
+        Notfound: "Pagina no encontrada"
+      </FontAwesomeIcon>
+    </div>
+  );
+};
 
-export default Notfound
+export default Notfound;

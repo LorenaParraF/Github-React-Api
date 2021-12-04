@@ -21,6 +21,7 @@ const Home = () => {
     setUserInformation(null);
     setLoader(true);
     const API = `https://api.github.com/users/${userName}`;
+
     const response = await fetch(API);
     const result = await response.json();
     console.log(result);
@@ -38,11 +39,14 @@ const Home = () => {
         {userInformation ? (
           <GithubUser
             avatar={userInformation?.avatar_url}
-            github={userInformation?.html_url}
+            github_url={userInformation?.html_url}
+            url={userInformation?.url}
             github_name={userInformation?.login}
+            starred={userInformation?.starred_url}
+            subscriptions={userInformation?.subscriptions_url}
+            organizations={userInformation?.organizations_url}
+            repos={userInformation?.public_repos}
             name={userInformation?.name}
-            repos={userInformation?.repos}
-            public_repos={userInformation?.public_repos}
             followers={userInformation?.followers}
             following={userInformation?.following}
           />
