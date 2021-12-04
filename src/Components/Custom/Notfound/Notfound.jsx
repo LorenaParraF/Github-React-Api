@@ -6,7 +6,7 @@ const Notfound = () => {
   return (
     <div>
       <FontAwesomeIcon icon={faHeartBroken}>
-        Notfound: "Pagina no encontrada"
+        Notfound: "Pagina no encontrada o sin seguidores "
       </FontAwesomeIcon>
     </div>
   );

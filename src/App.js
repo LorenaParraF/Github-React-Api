@@ -10,6 +10,7 @@ import Following from "./Components/Pages/Following/Following";
 
 //Layous
 import MainLayout from "./Layouts/MainLayout";
+import Notfound from "./Components/Custom/Notfound/Notfound";
 
 function App() {
   //JSX
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/following/:user" exact>
             <Following />
+          </Route>
+          <Route path="*">
+            <Notfound />
           </Route>
         </MainLayout>
       </Switch>
